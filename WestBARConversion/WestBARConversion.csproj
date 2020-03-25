@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99649F6A-FBB7-4394-9437-484E8A97D498}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WestBARConversion</RootNamespace>
+    <AssemblyName>WestBARConversion</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BARConversion.cs" />
+    <Compile Include="BARForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BARForm.Designer.cs">
+      <DependentUpon>BARForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CernerCore\LineTextDAL.cs" />
+    <Compile Include="CernerCore\EncounterInfoDAL.cs" />
+    <Compile Include="CernerCore\BenefitOrderDAL.cs" />
+    <Compile Include="CernerCore\CDV_DAL.cs" />
+    <Compile Include="CernerCore\BillItemModDAL.cs" />
+    <Compile Include="CernerCore\BillInfoDAL.cs" />
+    <Compile Include="CernerCore\MapDAL.cs" />
+    <Compile Include="CernerCore\CodingDAL.cs" />
+    <Compile Include="CernerCore\PrsnlAliasDAL.cs" />
+    <Compile Include="CernerCore\Pft_Proration_DAL.cs" />
+    <Compile Include="CernerCore\EncntrMotherChildDAL.cs" />
+    <Compile Include="CernerCore\AddressDAL.cs" />
+    <Compile Include="CernerCore\BarAccountDAL.cs" />
+    <Compile Include="CernerCore\CernerCommon.cs" />
+    <Compile Include="CernerCore\CernerMapDAL.cs" />
+    <Compile Include="CernerCore\AuthorizationDAL.cs" />
+    <Compile Include="CernerCore\ChargeDAL.cs" />
+    <Compile Include="CernerCore\CodeValueDAL.cs" />
+    <Compile Include="CernerCore\DatabaseAccess.cs" />
+    <Compile Include="CernerCore\DiagnosisDAL.cs" />
+    <Compile Include="CernerCore\EncntrPrsnlReltnDAL.cs" />
+    <Compile Include="CernerCore\Encntr_Condition_CodeDAL.cs" />
+    <Compile Include="CernerCore\Encntr_Occurrence_CodeDAL.cs" />
+    <Compile Include="CernerCore\Health_PlanDAL.cs" />
+    <Compile Include="CernerCore\Encntr_Value_CodeDAL.cs" />
+    <Compile Include="CernerCore\EncounterDAL.cs" />
+    <Compile Include="CernerCore\Encounter_AliasDAL.cs" />
+    <Compile Include="CernerCore\MPIOrganizationDAL.cs" />
+    <Compile Include="CernerCore\NomenclatureDAL.cs" />
+    <Compile Include="CernerCore\Pft_Trans_AliasDAL.cs" />
+    <Compile Include="CernerCore\PersonAliasDAL.cs" />
+    <Compile Include="CernerCore\PersonDAL.cs" />
+    <Compile Include="CernerCore\PersonNameHistDAL.cs" />
+    <Compile Include="CernerCore\PersonOrgReltDAL.cs" />
+    <Compile Include="CernerCore\EncntrPersonReltDAL.cs" />
+    <Compile Include="CernerCore\PersonPersonReltDAL.cs" />
+    <Compile Include="CernerCore\Encntr_Plan_ReltnDAL.cs" />
+    <Compile Include="CernerCore\Person_Prsnl_ReltnDAL.cs" />
+    <Compile Include="CernerCore\PftEncntrDAL.cs" />
+    <Compile Include="CernerCore\Pft_Trans_Reltn_Trans_LogDAL.cs" />
+    <Compile Include="CernerCore\Pft_Trans_Reltn_DAL.cs" />
+    <Compile Include="CernerCore\OrganizationDAL.cs" />
+    <Compile Include="CernerCore\PhoneDAL.cs" />
+    <Compile Include="CernerCore\DRGDAL.cs" />
+    <Compile Include="CernerCore\ProcedureModDAL.cs" />
+    <Compile Include="CernerCore\ProcedureDAL.cs" />
+    <Compile Include="CernerCore\ProcPrsnlReltn.cs" />
+    <Compile Include="CernerCore\ProviderDAL.cs" />
+    <Compile Include="CernerCore\TransLogDAL.cs" />
+    <Compile Include="CernerModel\Authorization.cs" />
+    <Compile Include="CernerModel\Address.cs" />
+    <Compile Include="CernerModel\BarAccount.cs" />
+    <Compile Include="CernerModel\Bill_Record_Data.cs" />
+    <Compile Include="CernerModel\Bill_Rec_Query.cs" />
+    <Compile Include="CernerModel\Encntr_Person_Reltn.cs" />
+    <Compile Include="CernerModel\Prsnl_Alias.cs" />
+    <Compile Include="CernerModel\PftProration.cs" />
+    <Compile Include="CernerModel\Drg.cs" />
+    <Compile Include="CernerModel\HealthPlan.cs" />
+    <Compile Include="CernerModel\Charge.cs" />
+    <Compile Include="CernerModel\Cpt.cs" />
+    <Compile Include="CernerModel\Diagnosis.cs" />
+    <Compile Include="CernerModel\Encntr_Plan_Reltn.cs" />
+    <Compile Include="CernerModel\Encounter.cs" />
+    <Compile Include="CernerModel\Encounter_Alias.cs" />
+    <Compile Include="CernerModel\MPIOrganization.cs" />
+    <Compile Include="CernerModel\Occurrence_Code.cs" />
+    <Compile Include="CernerModel\Employer.cs" />
+    <Compile Include="CernerModel\Person.cs" />
+    <Compile Include="CernerModel\Person_Alias.cs" />
+    <Compile Include="CernerModel\Person_Name_Hist.cs" />
+    <Compile Include="CernerModel\Person_Person_Reltn.cs" />
+    <Compile Include="CernerModel\Person_Prsnl_Reltn.cs" />
+    <Compile Include="CernerModel\Pft_Trans_Reltn_Trans_Log.cs" />
+    <Compile Include="CernerModel\PFT_Encntr.cs" />
+    <Compile Include="CernerModel\Pft_Trans_Reltn.cs" />
+    <Compile Include="CernerModel\Phone.cs" />
+    <Compile Include="CernerModel\ProcedureMod.cs" />
+    <Compile Include="CernerModel\Procedure_Obj.cs" />
+    <Compile Include="CernerModel\Provider.cs" />
+    <Compile Include="CernerModel\TransLog.cs" />
+    <Compile Include="CernerModel\Value_Code.cs" />
+    <Compile Include="DataIO.cs" />
+    <Compile Include="GlobalSettings.cs" />
+    <Compile Include="HuronEnums.cs" />
+    <Compile Include="HuronRoutines.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BARForm.resx">
+      <DependentUpon>BARForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MeditechLibrary\MeditechLibrary.csproj">
+      <Project>{fdfc27e5-8da4-440c-9627-eb14d0e05ae4}</Project>
+      <Name>MeditechLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CernerCore\ZPhyTypeMap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
